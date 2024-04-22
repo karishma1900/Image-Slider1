@@ -1,0 +1,27 @@
+body,html{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.slider-container{
+    width:100%;
+    overflow:hidden;
+}
+/* now for slider w e willa dd stylings */
+.slider{
+    display:flex;
+    transition: transform 0.5s ease;
+    width:300%;
+    /* no space between images */
+}
+.slider img{
+    /* now make image of full width */
+    width:100vw;
+    height:auto;
+    object-fit: cover;
+
+    /* objectfirt cover is used to fit a image in a container */
+
+    /* lets write js code for slider to work */
+}

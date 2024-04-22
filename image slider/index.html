@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="/style.css">
+   
+</head>
+<body>
+    <div class="slider-container">
+        <div class="slider">
+            <img src="/fresh-yellow-daisy-single-flower-close-up-beauty-generated-by-ai_188544-15543.avif" alt="Image 1">
+            <img src="/nature-image-for-website.jpg" alt="Image 2">
+            <img src="/painting-mountain-lake-with-mountain-background_188544-9126.avif" alt="Image 3">
+        </div>
+    </div>
+    <script>
+       /* Add query selector to slider */
+       let slider = document.querySelector('.slider');
+        /* Set current index to 0 */
+        let currentIdx = 0;
+        let interval = 5000; // Change image every 5 seconds
+        /* Create a function for next slide */
+        function nextSlide() {
+            currentIdx = (currentIdx + 1) % document.querySelectorAll('.slider img').length;
+            updateSlider();
+        }
+        /* Create function for updating slider */
+        function updateSlider() {
+            slider.style.transform = `translateX(${-currentIdx * 100 / 3}%)`;
+        }
+
+        setInterval(nextSlide, interval);
+
+        // here our main problem is we are not addiing view port in the head of the html
+    </script>
+</body>
+</html>
